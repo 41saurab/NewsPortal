@@ -9,7 +9,7 @@
                     @csrf
                     @method('PUT')
                     <div class="form-group">
-                        <label for="name">Category Name <span class="text-danger">*</span></label>
+                        <label class="btn btn-success  text-white h6 for=" name">Category Name </label>
                         <input id="name" class="form-control" type="text" name="name" placeholder="eg. Politics"
                             value="{{ $category->name }}">
                     </div>
