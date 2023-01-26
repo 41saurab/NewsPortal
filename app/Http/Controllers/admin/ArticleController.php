@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -16,7 +17,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('admin.article.index');
+        $articles = Article::all();
+        return view('admin.article.index', compact('articles'));
     }
 
     /**
@@ -45,6 +47,9 @@ class ArticleController extends Controller
         $article->meta_description = $request->meta_description;
         uploadImage($request, $article, 'featured');
         $article->save();
+
+        $article->category()->attach($request->category_id);
+        return redirect()->route('article.index');
     }
 
     /**
@@ -66,7 +71,9 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::find($id);
+        $categories = Category::all();
+        return view('admin.article.edit', compact('article', 'categories'));
     }
 
     /**
@@ -78,7 +85,16 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $article = Article::find($id);
+        $article->title = $request->title;
+        $article->description = $request->description;
+        $article->meta_word = $request->meta_word;
+        $article->meta_description = $request->meta_description;
+        uploadImage($request, $article, 'featured');
+        $article->update();
+
+        $article->category()->sync($request->category_id);
+        return redirect()->route('article.index');
     }
 
     /**

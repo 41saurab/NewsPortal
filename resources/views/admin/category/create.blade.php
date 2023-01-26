@@ -9,7 +9,8 @@
                     @csrf
                     <div class="form-group">
                         <label for="name" class="btn btn-success  text-white h6">Category Name </label>
-                        <input id="name" class="form-control" type="text" name="name" placeholder="eg. Politics">
+                        <input id="name" class="form-control" type="text" name="name"
+                            placeholder="eg. Politics">
                     </div>
                     <button type="submit" class="btn btn-success float-right text-bold h6">Save Category</button>
 

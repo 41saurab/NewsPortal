@@ -18,7 +18,14 @@
     <!-- Custom style CSS -->
     <link rel="stylesheet" href="/otika/assets/css/custom.css">
     <link rel='shortcut icon' type='image/x-icon' href='/otika/assets/img/favicon.ico' />
+    <link rel="stylesheet" href="/otika/assets/bundles/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="/otika/assets/bundles/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="/otika/assets/bundles/codemirror/theme/duotone-dark.css">
+    <link rel="stylesheet" href="/otika/assets/bundles/jquery-selectric/selectric.css">
+    <!-- Template CSS -->
+    <!-- Custom style CSS -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -208,10 +215,21 @@
     <script src="/otika/assets/js/scripts.js"></script>
     <!-- Custom JS File -->
     <script src="/otika/assets/js/custom.js"></script>
+
+    <script src="/otika/assets/bundles/summernote/summernote-bs4.js"></script>
+    <script src="/otika/assets/bundles/codemirror/lib/codemirror.js"></script>
+    <script src="/otika/assets/bundles/codemirror/mode/javascript/javascript.js"></script>
+    <script src="/otika/assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
+    <script src="/otika/assets/bundles/ckeditor/ckeditor.js"></script>
+    <!-- Page Specific JS File -->
+    <script src="/otika/assets/js/page/ckeditor.js"></script>
+    <!-- Template JS File -->
+    <!-- Custom JS File -->
+
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.select2').select2();
         });
     </script>

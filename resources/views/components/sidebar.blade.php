@@ -7,12 +7,16 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Services</li>
-            <li class="dropdown active">
+            <li class="dropdown ">
                 <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
             <li class="dropdown">
                 <a href="{{ route('category.index') }}" class="nav-link"><i
                         data-feather="command"></i><span>Category</span></a>
+            </li>
+            <li class="dropdown">
+                <a href="{{ route('article.index') }}" class="nav-link"><i
+                        data-feather="command"></i><span>Article</span></a>
             </li>
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>Master
@@ -21,13 +25,7 @@
                     <li><a class="nav-link" href="widget-chart.html">Company Setup</a></li>
                 </ul>
             </li>
-            <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                        data-feather="mail"></i><span>Article</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="email-inbox.html">Post Article</a></li>
-                </ul>
-            </li>
+
 
         </ul>
     </aside>

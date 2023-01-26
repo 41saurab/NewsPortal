@@ -17,17 +17,17 @@
                     </thead>
 
                     <tbody>
-                        @foreach ($categories as $index=>$category)
-                        <tr>
-                            <td class="text-bold h6">{{ ++$index }}</td>
-                            <td class="text-bold h6">{{ $category->name }}</td>
-                            <td class="text-bold h6">{{ $category->slug }}</td>
-                            <td class="text-bold h6">
-                                <a href="{{ route('category.edit',$category->id) }}"
-                                    class="badge badge-success">Edit</a>
-                            </td>
+                        @foreach ($categories as $index => $item)
+                            <tr>
+                                <td class="text-bold h6">{{ ++$index }}</td>
+                                <td class="text-bold h6">{{ $item->name }}</td>
+                                <td class="text-bold h6">{{ $item->slug }}</td>
+                                <td class="text-bold h6">
+                                    <a href="{{ route('category.edit', $item->id) }}"
+                                        class="badge badge-success">Edit</a>
+                                </td>
 
-                        </tr>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
