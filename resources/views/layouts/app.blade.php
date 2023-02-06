@@ -201,6 +201,7 @@
             </div>
             <!-- Main Content -->
             <div class="main-content">
+
                 {{ $slot }}
             </div>
         </div>
